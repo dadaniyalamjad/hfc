@@ -1,81 +1,49 @@
 import React, { Component } from "react";
+import { Layout, Typography, Avatar, Menu, Breadcrumb } from 'antd';
+import { UserOutlined } from '@ant-design/icons';
 
-export default class Header extends Component {
+import "./Header.css"
+
+const { Header, Content, Footer, Sider } = Layout;
+const { Title } = Typography;
+const { SubMenu } = Menu;
+
+export default class HeaderComponent extends Component {
   render() {
     return (
-      <div className="sidebar" data-color="white" data-active-color="danger">
-        <div className="logo">
-          <a
-            href="https://www.creative-tim.com"
-            className="simple-text logo-mini"
-          >
-            <div className="logo-image-small">
-              <img src="../assets/img/logo-small.png" />
-            </div>
-          </a>
-          <a
-            href="https://www.creative-tim.com"
-            className="simple-text logo-normal"
-          >
-            Creative Tim
-            {/* <!-- <div className="logo-image-big">
-            <img src="../assets/img/logo-big.png">
-          </div> --> */}
-          </a>
-        </div>
-        <div className="sidebar-wrapper">
-          <ul className="nav">
-            <li className="active ">
-              <a href="./dashboard.html">
-                <i className="nc-icon nc-bank"></i>
-                <p>Dashboard</p>
-              </a>
-            </li>
-            <li>
-              <a href="./icons.html">
-                <i className="nc-icon nc-diamond"></i>
-                <p>Icons</p>
-              </a>
-            </li>
-            <li>
-              <a href="./map.html">
-                <i className="nc-icon nc-pin-3"></i>
-                <p>Maps</p>
-              </a>
-            </li>
-            <li>
-              <a href="./notifications.html">
-                <i className="nc-icon nc-bell-55"></i>
-                <p>Notifications</p>
-              </a>
-            </li>
-            <li>
-              <a href="./user.html">
-                <i className="nc-icon nc-single-02"></i>
-                <p>User Profile</p>
-              </a>
-            </li>
-            <li>
-              <a href="./tables.html">
-                <i className="nc-icon nc-tile-56"></i>
-                <p>Table List</p>
-              </a>
-            </li>
-            <li>
-              <a href="./typography.html">
-                <i className="nc-icon nc-caps-small"></i>
-                <p>Typography</p>
-              </a>
-            </li>
-            <li className="active-pro">
-              <a href="./upgrade.html">
-                <i className="nc-icon nc-spaceship"></i>
-                <p>Upgrade to PRO</p>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
+
+      <Layout>
+        <Header className="container-fluid py-3">
+          <Avatar icon={<UserOutlined />} style={{ float: 'right' }} />
+          <Title style={{ color: 'white' }} level={3}>Huzaifa Fast Food</Title>
+        </Header>
+        <Layout>
+          <Sider style={{ height: '100vh' }}>
+            <Menu
+              onClick={this.handleClick}
+              style={{ width: 200 }}
+              defaultSelectedKeys={['dashboard']}
+              defaultOpenKeys={['sub1']}
+              mode="inline"
+            >
+              <Menu.Item key="dashboard">Dashboard</Menu.Item>
+              <Menu.Item key="category">Category</Menu.Item>
+              <Menu.Item key="items">Items</Menu.Item>
+            </Menu>
+          </Sider>
+          <Layout>
+            <Content style={{ padding: '0 50px' }}>
+              <Breadcrumb style={{ margin: '16px 0' }}>
+                <Breadcrumb.Item>Home</Breadcrumb.Item>
+                <Breadcrumb.Item>List</Breadcrumb.Item>
+                <Breadcrumb.Item>App</Breadcrumb.Item>
+              </Breadcrumb>
+              <div className="site-layout-content">Content</div>
+            </Content>
+            <Footer>Footer</Footer>
+          </Layout>
+        </Layout>
+      </Layout>
     );
   }
 }
