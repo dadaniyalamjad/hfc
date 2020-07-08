@@ -45,6 +45,7 @@ class Routers extends React.Component {
               /> */}
 
               <Route exact path="/" component={LoginScreen} />
+              <Route exact path="/dashboard" component={DashboardScreen} />
               {/* <ProtectedRoute exact path="/user" component={UserScreen} />
               <ProtectedRoute exact path="/form" component={FormScreen} />
               <ProtectedRoute
