@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import HeaderS from '../../components/Header'
-import SidebarS from '../../components/Sidebar/Sidebar'
+import SidebarS from '../../components/Sidebar'
 import { Layout, Breadcrumb } from 'antd';
 
 import './DealScreen.css'

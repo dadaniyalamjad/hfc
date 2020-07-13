@@ -12,7 +12,7 @@ import CategoryScreen from '../screens/Category'
 import DealScreen from '../screens/Deals'
 
 import { ReadCookie } from "../utils/readCookie";
-// import ProtectedRoute from "../utils/protectedRoute";
+import ProtectedRoute from "../utils/protectedRoute";
 
 class Routers extends React.Component {
   constructor(props) {
@@ -46,10 +46,10 @@ class Routers extends React.Component {
                 component={DashboardScreen}
               /> */}
 
-              <Route exact path="/" component={LoginScreen} />
-              <Route exact path="/dashboard" component={DashboardScreen} />
-              <Route exact path="/category" component={CategoryScreen} />
-              <Route exact path="/deal" component={DealScreen} />
+              {/* <Route exact path="/" component={LoginScreen} /> */}
+              <ProtectedRoute exact path="/dashboard" component={DashboardScreen} />
+              <ProtectedRoute exact path="/category" component={CategoryScreen} />
+              <ProtectedRoute exact path="/deal" component={DealScreen} />
               {/* <ProtectedRoute exact path="/user" component={UserScreen} />
               <ProtectedRoute exact path="/form" component={FormScreen} />
               <ProtectedRoute
