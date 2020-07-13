@@ -3,11 +3,11 @@ import HeaderS from '../../components/Header'
 import SidebarS from '../../components/Sidebar/Sidebar'
 import { Layout, Breadcrumb } from 'antd';
 
-import './CategoryScreen.css'
+import './DealScreen.css'
 
 const { Content } = Layout;
 
-export default class CategoryScreen extends Component {
+export default class DealScreen extends Component {
     render() {
         return (
             <Layout style={{ height: '100vh', overflowY: "hidden" }}>
@@ -20,7 +20,7 @@ export default class CategoryScreen extends Component {
                                 <Breadcrumb.Item>Category</Breadcrumb.Item>
                             </Breadcrumb>
                             <div className="site-layout-content">
-                                Category
+                                Deal
                             </div>
                         </Content>
                     </Layout>

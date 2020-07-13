@@ -9,6 +9,7 @@ import {
 import LoginScreen from "../screens/LoginScreen";
 import DashboardScreen from "../screens/Dashboard";
 import CategoryScreen from '../screens/Category'
+import DealScreen from '../screens/Deals'
 
 import { ReadCookie } from "../utils/readCookie";
 // import ProtectedRoute from "../utils/protectedRoute";
@@ -48,6 +49,7 @@ class Routers extends React.Component {
               <Route exact path="/" component={LoginScreen} />
               <Route exact path="/dashboard" component={DashboardScreen} />
               <Route exact path="/category" component={CategoryScreen} />
+              <Route exact path="/deal" component={DealScreen} />
               {/* <ProtectedRoute exact path="/user" component={UserScreen} />
               <ProtectedRoute exact path="/form" component={FormScreen} />
               <ProtectedRoute
