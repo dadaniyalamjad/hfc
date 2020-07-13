@@ -3,7 +3,7 @@ import { Layout, Breadcrumb } from 'antd';
 
 import './DashboardScreen.css'
 import HeaderS from '../../components/Header/Header'
-import SidebarS from '../../components/Sidebar/Sidebar'
+import SidebarS from '../../components/Sidebar'
 
 
 const { Content } = Layout;
