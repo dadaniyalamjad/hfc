@@ -71,10 +71,10 @@ export default class LoginScreen extends Component {
               </div>
               <div className="card-footer">
                 <div className="d-flex justify-content-center links">
-                  Don't have an account?<a href="#">Sign Up</a>
+                  Don't have an account?<a href="">Sign Up</a>
                 </div>
                 <div className="d-flex justify-content-center">
-                  <a href="#">Forgot your password?</a>
+                  <a href="">Forgot your password?</a>
                 </div>
               </div>
             </div>

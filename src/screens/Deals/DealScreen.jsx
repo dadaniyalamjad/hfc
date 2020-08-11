@@ -13,7 +13,7 @@ export default class DealScreen extends Component {
             <Layout style={{ height: '100vh', overflowY: "hidden" }}>
                 <HeaderS />
                 <Layout>
-                    <SidebarS />
+                    <SidebarS params={this.props} />
                     <Layout>
                         <Content style={{ padding: '0 50px' }}>
                             <Breadcrumb style={{ margin: '16px 0' }}>
